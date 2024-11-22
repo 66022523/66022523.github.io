@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --circle-radius: 240px;
+}
+
+@media (max-width: 640px) {
+  :root {
+    --circle-radius: 125px;
+  }
+}
+
 .circles {
   position: relative;
   width: 100%;
@@ -21,16 +31,16 @@
   position: relative;
   width: 1px;
   height: 1px;
-  margin: calc(240px / 2);
+  margin: calc(var(--circle-radius) / 2);
   border-radius: 50%;
   backface-visibility: hidden;
   perspective: 1000;
-  opacity: 0.9;
+  opacity: 0.6;
 }
 
 .circle.design {
-  background: #bfdbfe;
-  box-shadow: 0 0 240px 240px #bfdbfe;
+  background: oklch(var(--in));
+  box-shadow: 0 0 var(--circle-radius) var(--circle-radius) oklch(var(--in));
   animation-name: float;
   animation-duration: 6s;
   animation-iteration-count: infinite;
@@ -38,8 +48,8 @@
 }
 
 .circle.research {
-  background: #bbf7d0;
-  box-shadow: 0 0 240px 240px #bbf7d0;
+  background: oklch(var(--su));
+  box-shadow: 0 0 var(--circle-radius) var(--circle-radius) oklch(var(--su));
   animation-name: float;
   animation-duration: 8s;
   animation-iteration-count: infinite;
@@ -48,22 +58,22 @@
 
 @keyframes float {
   0% {
-    transform: translateX(calc(240px * 0)) translateZ(0);
+    transform: translateX(calc(var(--circle-radius) * 0)) translateZ(0);
   }
   20% {
-    transform: translateX(calc(240px * 0.5)) translateZ(0);
+    transform: translateX(calc(var(--circle-radius) * 0.5)) translateZ(0);
   }
   40% {
-    transform: translateX(calc(240px * 1)) translateZ(0);
+    transform: translateX(calc(var(--circle-radius) * 1)) translateZ(0);
   }
   60% {
-    transform: translateX(calc(240px * 1.5)) translateZ(0);
+    transform: translateX(calc(var(--circle-radius) * 1.5)) translateZ(0);
   }
   80% {
-    transform: translateX(calc(240px * 0.5)) translateZ(0);
+    transform: translateX(calc(var(--circle-radius) * 0.5)) translateZ(0);
   }
   100% {
-    transform: translateX(calc(240px * 0)) translateZ(0);
+    transform: translateX(calc(var(--circle-radius) * 0)) translateZ(0);
   }
 }
 
@@ -73,23 +83,5 @@
   }
   100% {
     transform: rotate(360deg) translateZ(0);
-  }
-}
-
-@media (max-width: 640px) {
-  :root {
-    --radius: 125px;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .circle.design {
-    background: #1e40af;
-    box-shadow: 0 0 240px 240px #1e40af;
-  }
-
-  .circle.research {
-    background: #166534;
-    box-shadow: 0 0 240px 240px #166534;
   }
 }

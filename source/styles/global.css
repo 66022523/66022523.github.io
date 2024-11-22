@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --canvas-color-design: oklch(var(--in));
+  --canvas-color-research: oklch(var(--su));
+  --canvas-radius: 240px;
+}
+
+.canvas {
+  z-index: -10;
+}
+
+.canvas,
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.circles {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: rotate;
+  animation-duration: 25s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  backface-visibility: hidden;
+  perspective: 1000;
+}
+
+.circle {
+  position: relative;
+  width: 1px;
+  height: 1px;
+  margin: calc(var(--canvas-radius) / 2);
+  border-radius: 50%;
+  backface-visibility: hidden;
+  perspective: 1000;
+  opacity: 0.6;
+}
+
+.circle.design {
+  background: var(--canvas-color-design);
+  box-shadow: 0 0 var(--canvas-radius) var(--canvas-radius) var(--canvas-color-design);
+  animation-name: float;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.circle.research {
+  background: var(--canvas-color-research);
+  box-shadow: 0 0 var(--canvas-radius) var(--canvas-radius) var(--canvas-color-research);
+  animation-name: float;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+@media (max-width: 640px) {
+  :root {
+    --canvas-radius: 125px;
+  }
+
+  .overlay {
+    background-size: 50%;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateX(calc(var(--canvas-radius) * 0)) translateZ(0);
+  }
+  20% {
+    transform: translateX(calc(var(--canvas-radius) * 0.5)) translateZ(0);
+  }
+  40% {
+    transform: translateX(calc(var(--canvas-radius) * 1)) translateZ(0);
+  }
+  60% {
+    transform: translateX(calc(var(--canvas-radius) * 1.5)) translateZ(0);
+  }
+  80% {
+    transform: translateX(calc(var(--canvas-radius) * 0.5)) translateZ(0);
+  }
+  100% {
+    transform: translateX(calc(var(--canvas-radius) * 0)) translateZ(0);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) translateZ(0);
+  }
+  100% {
+    transform: rotate(360deg) translateZ(0);
+  }
+}

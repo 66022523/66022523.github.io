@@ -133,7 +133,7 @@
     </header>
 
     <nav class="fixed bottom-0 left-0 top-0 z-40 flex items-center p-4">
-      <ul class="backdrop menu rounded-box bg-base-200/50 shadow-xl">
+      <ul class="menu rounded-box bg-base-200/50 shadow-xl backdrop-blur">
         <li>
           <a href="#home" class="active tooltip tooltip-right" data-tip="บ้าน">
             <svg
@@ -287,12 +287,12 @@
               </div>
             </h1>
             <p class="pb-6">Full Stacks, Designer, Developer, DevOps</p>
-            <a href="#about" aria-label="Scroll Down">
+            <a class="text-primary" href="#about" aria-label="Scroll Down">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                class="mx-auto size-8 animate-bounce text-primary"
+                class="mx-auto size-8 animate-bounce"
               >
                 <path
                   fill-rule="evenodd"
@@ -301,7 +301,7 @@
                 />
               </svg>
             </a>
-            <ul class="absolute bottom-4 right-4 flex gap-4">
+            <ul class="absolute bottom-0 right-0 flex gap-4 p-4">
               <li>
                 <a
                   href="https://www.facebook.com/chasu2005"
@@ -381,6 +381,108 @@
             </ul>
           </div>
         </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="min-h-screen space-y-12 p-4 sm:p-24">
+        <div>
+          <a href="#about" class="badge badge-secondary gap-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="inline-block size-4"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            เกี่ยวกับ
+          </a>
+          <h2 class="text-4xl font-bold">ข้อมูลส่วนตัวและประวัติ</h2>
+          <p>การทำความรู้จักกันนั้นเป็นเรื่องสำคัญ ดีกว่าไม่รู้จักใครเลย</p>
+        </div>
+        <article class="grid grid-cols-2 items-center gap-12">
+          <div
+            class="card mx-auto w-96 bg-base-100/80 shadow-[30px_30px_0_0_oklch(var(--b2)_/_0.8)] drop-shadow-[-30px_-30px_0_oklch(var(--b2)_/_0.8)] backdrop-blur-xl"
+          >
+            <figure class="px-10 pt-10">
+              <img
+                class="h-52 w-full rounded-xl object-cover object-[0_-6rem]"
+                src="./assets/who.jpg"
+                width="384px"
+                height="208px"
+                alt="I was in high school."
+              />
+            </figure>
+            <div class="card-body prose">
+              <table>
+                <tbody>
+                  <tr>
+                    <th>ชื่อ</th>
+                    <td>นาย ชัยวัฒน์ สุวรรณรัตน์ (ฟลุ๊ค)</td>
+                  </tr>
+                  <tr>
+                    <th>วันเกิด</th>
+                    <td>12 มกราคม 2548 (<span id="about-age">0</span> ปี)</td>
+                  </tr>
+                  <tr>
+                    <th>การศึกษา</th>
+                    <td>มหาวิทยาลัยพะเยา</td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td>คณะเทคโนโลยีสารสนเทศและการสื่อสาร</td>
+                  </tr>
+                  <tr>
+                    <th></th>
+                    <td>สาขาวิศวกรรมซอฟต์แวร์</td>
+                  </tr>
+                  <tr>
+                    <th>บ้านเกิด</th>
+                    <td>ประเทศไทย</td>
+                  </tr>
+                  <tr>
+                    <th>ภาษา</th>
+                    <td>
+                      <span class="badge badge-neutral">ไทย</span>
+                      <span class="badge badge-neutral">Eng</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="prose">
+            <h3 class="text-3xl font-bold">
+              จุดเริ่มต้น<u>อันแสนเบียว</u>สู่แสนทรหด
+            </h3>
+            <small
+              >CHASU
+              เป็นนามแฝงที่ตัดมาจากชื่อจริงจากคำนำหน้าสามตัวและนามสกุลสองตัว</small
+            >
+            <p>
+              จุดเริ่มต้นของผมอาจจะเกิดมาจากพ่อของผมเองที่เคยแฮ็กชาวบ้านชาวช่องเขาไปเรื่อยอย่างไปขโมยอินเทอร์เน็ตจากข้างบ้านซึ่งถูกล็อคเอามาต่อเร้าเตอร์ของบ้านเพิ่มแล้วใช้ได้จริงเฉย!
+              ยิ่งบวกกับตอนนั้นเคยดูหนังแฮ็กเกอร์กับพ่อด้วยโคตรเท่ห์!!
+              (ตอนนั้นผมเบียวอะไรแบบนี้มาก5555) ด้วยความสงสัยหลายๆ
+              อย่างจึงเริ่มทำให้ผมเกิดความสนใจตั้งแต่เด็กเกี่ยวกับเรื่องพวกนี้
+              ผมจึงเริ่มศึกษาเรื่องแนวนี้จากในเน็ตด้วยตัวเองตั้งแต่ตอนประถมเลยและภาษาแรกที่ผมเจอคือ
+              HTML/CSS/JavaScript นั่นเอง
+              <br />ช่วงหนึ่งของผมนั่นผมเคยได้เป็นสารพัดช่างมากเลยตั้งแต่พัดลม,
+              ตู้เย็น, คอมพิวเตอร์ยันเครื่องปั๊มน้ำหมู่บ้าน! ทุกๆ
+              วันนี้ผมยังสงสัยอยู่เลยว่าผมควรไปเป็น IT Support หรือ Software
+              Engineer กันแน่
+            </p>
+            <blockquote>
+              เมื่อก่อนพ่อผมเคยใช้ Back Track (ปัจจุบันเรียกว่า Kali) ด้วยนะ
+              พ่อผมบอกว่ามันคือเครื่องมือแฮ็กชั้นดีเลย
+              ผมได้สกิลตรงนี้มาจากพ่อนิดๆ หน่อยๆ
+              แต่น่าเสียดายผมลืมมันไปหมดละล่ะสบายใจได้5555
+            </blockquote>
+          </div>
+        </article>
       </section>
     </main>
 

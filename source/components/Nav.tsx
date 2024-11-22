@@ -34,7 +34,7 @@ export function Nav() {
       icon: ArchiveBoxIcon,
     },
     {
-      id: "experience",
+      id: "experiences",
       label: "ประสบการณ์",
       icon: AcademicCapIcon,
     },

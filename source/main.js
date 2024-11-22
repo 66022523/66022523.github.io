@@ -1,3 +1,4 @@
+// ? Theme Controller
 const themeToggleAutoIcon = document.getElementById("theme-toggle-auto-icon");
 const themeToggleDarkIcon = document.getElementById("theme-toggle-dark-icon");
 const themeToggleLightIcon = document.getElementById("theme-toggle-light-icon");
@@ -19,10 +20,10 @@ function updateThemeIcon(theme) {
 
   switch (theme) {
     case "light":
-      themeToggleDarkIcon.classList.remove("hidden");
+      themeToggleLightIcon.classList.remove("hidden");
       break;
     case "dark":
-      themeToggleLightIcon.classList.remove("hidden");
+      themeToggleDarkIcon.classList.remove("hidden");
       break;
     case "auto":
       themeToggleAutoIcon.classList.remove("hidden");
@@ -70,6 +71,7 @@ window
     }
   });
 
+// ? Scrollspy
 document.addEventListener("DOMContentLoaded", function () {
   const navLinks = document.querySelectorAll("nav a");
   const sections = document.querySelectorAll("section");

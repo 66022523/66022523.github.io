@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  import("./calculatorAge.js");
+  import("./calculateAge.js");
   import("./scrollSpy.js");
 });
 

@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@plugin "@tailwindcss/typography";
+@plugin "daisyui" {
+  themes:
+    light --default,
+    dark --prefersdark;
+}
+
+@theme {
+  --font-sans: "Prompt", "sans-serif";
+
+  --animate-float: float 8s infinite alternate;
+  --animate-float-reverse: float 8s infinite alternate-reverse;
+
+  @keyframes float {
+    0% {
+      transform: translateX(calc(var(--canvas-radius) * 0)) translateZ(0);
+    }
+    20% {
+      transform: translateX(calc(var(--canvas-radius) * 0.5)) translateZ(0);
+    }
+    40% {
+      transform: translateX(calc(var(--canvas-radius) * 1)) translateZ(0);
+    }
+    60% {
+      transform: translateX(calc(var(--canvas-radius) * 1.5)) translateZ(0);
+    }
+    80% {
+      transform: translateX(calc(var(--canvas-radius) * 0.5)) translateZ(0);
+    }
+    100% {
+      transform: translateX(calc(var(--canvas-radius) * 0)) translateZ(0);
+    }
+  }
+
+  --animate-rotate: rotate 25s infinite alternate;
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg) translateZ(0);
+    }
+    100% {
+      transform: rotate(360deg) translateZ(0);
+    }
+  }
+}
+
+:root {
+  --canvas-color-design: var(--color-info);
+  --canvas-color-research: var(--color-success);
+  --canvas-radius: 240px;
+}
+
+@media (max-width: 640px) {
+  :root {
+    --canvas-radius: 125px;
+  }
+}

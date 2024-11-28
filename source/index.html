@@ -277,11 +277,11 @@
       <!-- Home Section -->
       <section
         id="home"
-        class="hero isolate min-h-screen bg-[radial-gradient(32rem_32rem_at_top,var(--color-base-100),transparent)]"
+        class="hero relative isolate min-h-screen bg-[radial-gradient(32rem_32rem_at_top,var(--color-base-100),transparent)]"
       >
         <div class="absolute inset-0 -z-10 overflow-hidden">
           <svg
-            class="absolute top-0 left-[max(50%,25rem)] h-[32rem] w-[64rem] -translate-x-1/2 stroke-gray-200 [mask-image:radial-gradient(32rem_32rem_at_top,var(--color-base-100),transparent)] dark:stroke-gray-800"
+            class="absolute top-0 left-[max(50%,25rem)] size-full -translate-x-1/2 stroke-gray-200 [mask-image:radial-gradient(64rem_40rem_at_top,var(--color-base-100),transparent)] dark:stroke-gray-800"
             aria-hidden="true"
           >
             <defs>
@@ -299,7 +299,7 @@
             <svg
               x="50%"
               y="-1"
-              class="overflow-visible fill-gray-50 dark:fill-gray-950"
+              class="overflow-visible fill-gray-100 dark:fill-gray-900"
             >
               <path
                 d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z"
@@ -569,7 +569,7 @@
             ทักษะการเขียนโปรแกรมที่ผมเคยศึกษาและเคยใช้งานทั้งหมดรวมถึงระบบปฎิบัติการ
           </p>
         </div>
-        <div class="carousel w-full">
+        <div class="carousel w-full" id="skill-carousel-items">
           <div
             id="skills-1"
             class="carousel-item grid w-full grid-cols-4 gap-4"
@@ -1022,8 +1022,8 @@
             </skill-card>
             <skill-card
               icon-src="./assets/icons/Yarn-Dark.svg"
-              icon-alt="Yarn-Dark"
-              data-title="Yarn-Dark"
+              icon-alt="Yarn"
+              data-title="Yarn"
               data-type="เครื่องมือ"
               data-description=""
             >
@@ -1040,8 +1040,121 @@
           <a href="#skills-7" class="btn btn-xs">7</a>
         </div>
       </section>
+
       <!-- Portfolio -->
-      <section id="portfolio"></section>
+      <section
+        id="portfolio"
+        class="bg-linear-to-b/oklch from-transparent to-base-300 relative isolate min-h-screen space-y-12 overflow-hidden p-4 sm:p-24"
+      >
+        <svg
+          viewBox="0 0 1024 1024"
+          class="absolute top-1/2 left-1/2 -z-10 size-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0"
+          aria-hidden="true"
+        >
+          <circle
+            cx="512"
+            cy="512"
+            r="512"
+            fill="url(#circle)"
+            fill-opacity="0.5"
+          />
+          <defs>
+            <radialGradient id="circle">
+              <stop stop-color="var(--color-warning)" />
+              <stop offset="1" stop-color="var(--color-warning)" />
+            </radialGradient>
+          </defs>
+        </svg>
+        <div class="text-end">
+          <a href="#skills" class="badge badge-warning badge-soft gap-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="inline-block size-4"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M14.447 3.026a.75.75 0 0 1 .527.921l-4.5 16.5a.75.75 0 0 1-1.448-.394l4.5-16.5a.75.75 0 0 1 .921-.527ZM16.72 6.22a.75.75 0 0 1 1.06 0l5.25 5.25a.75.75 0 0 1 0 1.06l-5.25 5.25a.75.75 0 1 1-1.06-1.06L21.44 12l-4.72-4.72a.75.75 0 0 1 0-1.06Zm-9.44 0a.75.75 0 0 1 0 1.06L2.56 12l4.72 4.72a.75.75 0 0 1-1.06 1.06L.97 12.53a.75.75 0 0 1 0-1.06l5.25-5.25a.75.75 0 0 1 1.06 0Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            ผลงาน
+          </a>
+          <h2 class="text-4xl font-bold">โปรเจคและผลงาน</h2>
+          <p>
+            ผลงานของผมและโครงการที่เกี่ยวข้องซึ่งเกิดขึ้นมาได้ด้วยความภาคภูมิใจ
+          </p>
+        </div>
+        <div class="grid grid-cols-3 gap-4">
+          <div class="card card-compact bg-base-100 shadow-xl">
+            <figure>
+              <img
+                class="h-60 object-cover object-top"
+                src="./assets/images/hamtarot-preview.webp"
+                width="1280"
+                height="720"
+                alt="HAMTAROT"
+              />
+            </figure>
+            <a href="https://github.com/66022523/HAMTAROT" class="card-body">
+              <h2 class="card-title">HAMTAROT</h2>
+              <p>
+                นี่คือเว็บไซต์ทํานายดวงชะตาไพ่ทาโรต์ที่สร้างขึ้นด้วย Nuxt.js
+                (Vue)
+              </p>
+              <div class="card-actions justify-end">
+                <div class="badge badge-outline">สื่อบันเทิง</div>
+                <div class="badge badge-outline">โหราศาสตร์</div>
+              </div>
+            </a>
+          </div>
+          <div class="card card-compact bg-base-100 shadow-xl">
+            <figure>
+              <img
+                class="h-60 object-cover object-top"
+                src="./assets/images/mixit-preview.webp"
+                width="1280"
+                height="720"
+                alt="MIXIT"
+              />
+            </figure>
+            <a href="https://github.com/66022523/MIXIT" class="card-body">
+              <h2 class="card-title">MIXIT</h2>
+              <p>ชุมชนเกมขนาดใหญ่จากทั่วโลก</p>
+              <div class="card-actions justify-end">
+                <div class="badge badge-outline">เกม</div>
+                <div class="badge badge-outline">ชุมชน</div>
+                <div class="badge badge-outline">สื่อสังคม</div>
+              </div>
+            </a>
+          </div>
+          <a
+            href="https://github.com/66022523/ATBank"
+            class="card card-compact bg-base-100 shadow-xl"
+          >
+            <figure>
+              <img
+                class="h-60 object-cover object-top"
+                src="./assets/images/atbank-preview.webp"
+                width="1280"
+                height="720"
+                alt="ATBank"
+              />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">ATBank</h2>
+              <p>
+                ตัวอย่างของแอปธนาคารที่สร้างขึ้นด้วย NetBeans บน Java (Maven)
+              </p>
+              <div class="card-actions justify-end">
+                <div class="badge badge-outline">ตัวอย่าง</div>
+                <div class="badge badge-outline">โปรแกรม</div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
 
       <!-- Experiences -->
       <section id="experiences"></section>

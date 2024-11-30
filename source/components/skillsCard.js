@@ -1,4 +1,4 @@
-import getAverageColor from "../scripts/getAverageColor.js";
+import { getAverageRGB } from "../scripts/utils.js";
 
 class SkillCard extends HTMLElement {
   constructor() {
@@ -34,7 +34,7 @@ class SkillCard extends HTMLElement {
 
     // Get average color when image loads
     img.onload = () => {
-      const { r, g, b } = getAverageColor(img);
+      const { r, g, b } = getAverageRGB(img);
       card.style.backgroundColor = `rgba(${r}, ${g}, ${b}, 0.5)`;
     };
 

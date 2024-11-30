@@ -3033,6 +3033,21 @@
   .border-b-warning {
     border-bottom-color: var(--color-warning);
   }
+  .bg-\[linear-gradient\(rgba\(135\,_80\,_156\,_0\.9\)\,_rgba\(135\,_80\,_156\,_0\.9\)\)\,_url\(\/source\/assets\/images\/polka-dots\.svg\)\] {
+    background-color: linear-gradient(rgba(135, 80, 156, 0.9), rgba(135, 80, 156, 0.9)), url(/source/assets/images/polka-dots.svg);
+  }
+  .bg-\[u\] {
+    background-color: u;
+  }
+  .bg-\[url\(\/source\/assets\/images\/polka-dots\.svg\)\/50\%\] {
+    background-color: url(/source/assets/images/polka-dots.svg)/50%;
+  }
+  .bg-\[url\(\/source\/assets\/images\/polka-dots\.svg\)\/\] {
+    background-color: url(/source/assets/images/polka-dots.svg)/;
+  }
+  .bg-\[url\(\/source\/assets\/images\/polka-dots\.svg\)_50\%\] {
+    background-color: url(/source/assets/images/polka-dots.svg) 50%;
+  }
   .bg-base-100 {
     background-color: var(--color-base-100);
   }
@@ -3079,8 +3094,119 @@
     --tw-gradient-position: to top in oklch,;
     background-image: linear-gradient(var(--tw-gradient-stops));
   }
+  .bg-\[linear-gradient\(oklch\(from_var\(--color-base-300\)_l_c_h\/0\.5\)\,oklch\(from_var\(--color-base-300\)_l_c_h\/0\.5\)\)\,url\(\/source\/assets\/images\/polka-dots\.svg\)\] {
+    background-image: linear-gradient(oklch(from var(--color-base-300) l c h/0.5),oklch(from var(--color-base-300) l c h/0.5)),url(/source/assets/images/polka-dots.svg);
+  }
+  .bg-\[linear-gradient\(oklch\(from_var\(--color-base-300\)_l_c_h_\/0\.5\)\,oklch\(from_var\(--color-base-300\)_l_c_h_\/0\.5\)\)\,url\(\/source\/assets\/images\/polka-dots\.svg\)\] {
+    background-image: linear-gradient(oklch(from var(--color-base-300) l c h /0.5),oklch(from var(--color-base-300) l c h /0.5)),url(/source/assets/images/polka-dots.svg);
+  }
+  .bg-\[linear-gradient\(oklch\(from_var\(--color-base-300\)_l_c_h_\/_0\.\)\,oklch\(from_var\(--color-base-300\)_l_c_h_\/_0\.\)\)\,url\(\/source\/assets\/images\/polka-dots\.svg\)\] {
+    background-image: linear-gradient(oklch(from var(--color-base-300) l c h / 0.),oklch(from var(--color-base-300) l c h / 0.)),url(/source/assets/images/polka-dots.svg);
+  }
+  .bg-\[linear-gradient\(oklch\(from_var\(--color-base-300\)_l_c_h_\/_0\.5\)\,oklch\(from_var\(--color-base-300\)_l_c_h_\/_0\.5\)\)\,url\(\/source\/assets\/images\/polka-dots\.svg\)\] {
+    background-image: linear-gradient(oklch(from var(--color-base-300) l c h / 0.5),oklch(from var(--color-base-300) l c h / 0.5)),url(/source/assets/images/polka-dots.svg);
+  }
+  .bg-\[linear-gradient\(oklch\(from_var\(--color-base-300\)_l_c_h_\/_0\.9\)\,oklch\(from_var\(--color-base-300\)_l_c_h_\/_0\.9\)\)\,url\(\/source\/assets\/images\/polka-dots\.svg\)\] {
+    background-image: linear-gradient(oklch(from var(--color-base-300) l c h / 0.9),oklch(from var(--color-base-300) l c h / 0.9)),url(/source/assets/images/polka-dots.svg);
+  }
+  .bg-\[linear-gradient\(oklch\(from_var\(--color-base-300\)_l_ch\/0\.5\)\,oklch\(from_var\(--color-base-300\)_l_ch\/0\.5\)\)\,url\(\/source\/assets\/images\/polka-dots\.svg\)\] {
+    background-image: linear-gradient(oklch(from var(--color-base-300) l ch/0.5),oklch(from var(--color-base-300) l ch/0.5)),url(/source/assets/images/polka-dots.svg);
+  }
+  .bg-\[linear-gradient\(oklch\(from_var\(--color-base-300\)_lch\/0\.5\)\,oklch\(from_var\(--color-base-300\)_lch\/0\.5\)\)\,url\(\/source\/assets\/images\/polka-dots\.svg\)\] {
+    background-image: linear-gradient(oklch(from var(--color-base-300) lch/0.5),oklch(from var(--color-base-300) lch/0.5)),url(/source/assets/images/polka-dots.svg);
+  }
+  .bg-\[linear-gradient\(oklch\(from_var\(--color-base-300\)_lch_\/_0\.9\)\,oklch\(from_var\(--color-base-300\)_lch_\/_0\.9\)\)\,url\(\/source\/assets\/images\/polka-dots\.svg\)\] {
+    background-image: linear-gradient(oklch(from var(--color-base-300) lch / 0.9),oklch(from var(--color-base-300) lch / 0.9)),url(/source/assets/images/polka-dots.svg);
+  }
+  .bg-\[linear-gradient\(oklch\(var\(--color-base-300\)\/0\.9\)\,\(var\(--color-base-300\)\/0\.9\)\)\,url\(\/source\/assets\/images\/polka-dots\.svg\)\] {
+    background-image: linear-gradient(oklch(var(--color-base-300)/0.9),(var(--color-base-300)/0.9)),url(/source/assets/images/polka-dots.svg);
+  }
+  .bg-\[linear-gradient\(oklchvar\(--color-base-300\)\/0\.9\,var\(--color-base-300\)\/0\.9\)\,url\(\/source\/assets\/images\/polka-dots\.svg\)\] {
+    background-image: linear-gradient(oklchvar(--color-base-300)/0.9,var(--color-base-300)/0.9),url(/source/assets/images/polka-dots.svg);
+  }
+  .bg-\[linear-gradient\(rgba\(135\,_80\,_156\,_0\.9\)\,_rgba\(135\,_80\,_156\,_0\.9\)\)\,url\(\/source\/assets\/images\/polka-dots\.svg\)\] {
+    background-image: linear-gradient(rgba(135, 80, 156, 0.9), rgba(135, 80, 156, 0.9)),url(/source/assets/images/polka-dots.svg);
+  }
+  .bg-\[linear-gradient\(rgba\(135\,_80\,_156\,_0\.9\)\,rgba\(135\,_80\,_156\,_0\.9\)\)\,url\(\/source\/assets\/images\/polka-dots\.svg\)\] {
+    background-image: linear-gradient(rgba(135, 80, 156, 0.9),rgba(135, 80, 156, 0.9)),url(/source/assets/images/polka-dots.svg);
+  }
+  .bg-\[linear-gradient\(rgba\(var\(\)\,_0\.9\)\,rgba\(var\(\)\,_0\.9\)\)\,url\(\/source\/assets\/images\/polka-dots\.svg\)\] {
+    background-image: linear-gradient(rgba(var(), 0.9),rgba(var(), 0.9)),url(/source/assets/images/polka-dots.svg);
+  }
+  .bg-\[linear-gradient\(rgba\(var\(--color-base-300\)\,0\.9\)\,rgba\(var\(--color-base-300\)\,0\.9\)\)\,url\(\/source\/assets\/images\/polka-dots\.svg\)\] {
+    background-image: linear-gradient(rgba(var(--color-base-300),0.9),rgba(var(--color-base-300),0.9)),url(/source/assets/images/polka-dots.svg);
+  }
+  .bg-\[linear-gradient\(rgba\(var\(--color-base-300\)\,_0\.9\)\,rgba\(var\(--color-base-300\)\,_0\.9\)\)\,url\(\/source\/assets\/images\/polka-dots\.svg\)\] {
+    background-image: linear-gradient(rgba(var(--color-base-300), 0.9),rgba(var(--color-base-300), 0.9)),url(/source/assets/images/polka-dots.svg);
+  }
+  .bg-\[linear-gradient\(rgba\(var\(--color-base-300\)\/0\.9\)\,rgba\(var\(--color-base-300\)\/0\.9\)\)\,url\(\/source\/assets\/images\/polka-dots\.svg\)\] {
+    background-image: linear-gradient(rgba(var(--color-base-300)/0.9),rgba(var(--color-base-300)/0.9)),url(/source/assets/images/polka-dots.svg);
+  }
+  .bg-\[linear-gradient\(rgba\(var\,_0\.9\)\,rgba\(var\,_0\.9\)\)\,url\(\/source\/assets\/images\/polka-dots\.svg\)\] {
+    background-image: linear-gradient(rgba(var, 0.9),rgba(var, 0.9)),url(/source/assets/images/polka-dots.svg);
+  }
+  .bg-\[linear-gradient\(var\(--color-base-300\)\,var\(--color-base-300\)\)\,url\(\/source\/assets\/images\/polka-dots\.svg\)\] {
+    background-image: linear-gradient(var(--color-base-300),var(--color-base-300)),url(/source/assets/images/polka-dots.svg);
+  }
+  .bg-\[linear-gradient\(var\(--color-base-300\)\.\,var\(--color-base-300\)\.\)\,url\(\/source\/assets\/images\/polka-dots\.svg\)\] {
+    background-image: linear-gradient(var(--color-base-300).,var(--color-base-300).),url(/source/assets/images/polka-dots.svg);
+  }
+  .bg-\[linear-gradient\(var\(--color-base-300\)\/\,var\(--color-base-300\)\/\)\,url\(\/source\/assets\/images\/polka-dots\.svg\)\] {
+    background-image: linear-gradient(var(--color-base-300)/,var(--color-base-300)/),url(/source/assets/images/polka-dots.svg);
+  }
+  .bg-\[linear-gradient\(var\(--color-base-300\)\/0\.9\,var\(--color-base-300\)\/0\.9\)\,url\(\/source\/assets\/images\/polka-dots\.svg\)\] {
+    background-image: linear-gradient(var(--color-base-300)/0.9,var(--color-base-300)/0.9),url(/source/assets/images/polka-dots.svg);
+  }
+  .bg-\[linear-gradient\(var\(--color-base-300\)\/90\%\,var\(--color-base-300\)\/90\%\)\,url\(\/source\/assets\/images\/polka-dots\.svg\)\] {
+    background-image: linear-gradient(var(--color-base-300)/90%,var(--color-base-300)/90%),url(/source/assets/images/polka-dots.svg);
+  }
+  .bg-\[linear-gradient\(var\(--color-base-300\)\/90\,var\(--color-base-300\)\/90\)\,url\(\/source\/assets\/images\/polka-dots\.svg\)\] {
+    background-image: linear-gradient(var(--color-base-300)/90,var(--color-base-300)/90),url(/source/assets/images/polka-dots.svg);
+  }
+  .bg-\[radial-gradient\(32rem_32rem_at_bottom\,var\(--color-base-100\)\,transparent\)\] {
+    background-image: radial-gradient(32rem 32rem at bottom,var(--color-base-100),transparent);
+  }
   .bg-\[radial-gradient\(32rem_32rem_at_top\,var\(--color-base-100\)\,transparent\)\] {
     background-image: radial-gradient(32rem 32rem at top,var(--color-base-100),transparent);
+  }
+  .bg-\[url\(\"https\:\/\/www\.fffuel\.co\/images\/tttexture\/full\/140\.jpg\"\)\] {
+    background-image: url("https://www.fffuel.co/images/tttexture/full/140.jpg");
+  }
+  .bg-\[url\(\'\'\)\] {
+    background-image: url('');
+  }
+  .bg-\[url\(\'https\:\/\/www\.fffuel\.co\/images\/tttexture\/full\/140\.jpg\'\)\] {
+    background-image: url('https://www.fffuel.co/images/tttexture/full/140.jpg');
+  }
+  .bg-\[url\(\)\] {
+    background-image: url();
+  }
+  .bg-\[url\(\.\/assets\/images\/\)\] {
+    background-image: url(./assets/images/);
+  }
+  .bg-\[url\(\.\/assets\/images\/polka\)\] {
+    background-image: url(./assets/images/polka);
+  }
+  .bg-\[url\(\.\/assets\/images\/polka-dots\)\] {
+    background-image: url(./assets/images/polka-dots);
+  }
+  .bg-\[url\(\.\/assets\/images\/polka-dots\.svg\)\] {
+    background-image: url(./assets/images/polka-dots.svg);
+  }
+  .bg-\[url\(\/assets\/images\/polka-dots\.svg\)\] {
+    background-image: url(/assets/images/polka-dots.svg);
+  }
+  .bg-\[url\(\/source\/assets\/images\/polka-dots\.svg\)\] {
+    background-image: url(/source/assets/images/polka-dots.svg);
+  }
+  .bg-\[url\(\\\"https\:\/\/www\.fffuel\.co\/images\/tttexture\/full\/140\.jpg\\\"\)\] {
+    background-image: url(\"https://www.fffuel.co/images/tttexture/full/140.jpg\");
+  }
+  .bg-\[url\(https\:\/\/www\.fffuel\.co\/images\/tttexture\/full\/140\.jpg\)\] {
+    background-image: url(https://www.fffuel.co/images/tttexture/full/140.jpg);
+  }
+  .bg-\[url\(https\:\/\/www\.fffuel\.co\/images\/tttexture\/thumb-149\.jpg\)\] {
+    background-image: url(https://www.fffuel.co/images/tttexture/thumb-149.jpg);
   }
   .from-base-300 {
     --tw-gradient-from: var(--color-base-300);
@@ -3093,6 +3219,9 @@
   .to-transparent {
     --tw-gradient-to: transparent;
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position,) var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+  .bg-center {
+    background-position: center;
   }
   .fill-current {
     fill: currentColor;
@@ -3369,6 +3498,9 @@
     --tw-ease: var(--ease-out);
     transition-timing-function: var(--ease-out);
   }
+  .\[mask-image\:radial-gradient\(64rem_40rem_at_bottom\,var\(--color-base-100\)\,transparent\)\] {
+    mask-image: radial-gradient(64rem 40rem at bottom,var(--color-base-100),transparent);
+  }
   .\[mask-image\:radial-gradient\(64rem_40rem_at_top\,var\(--color-base-100\)\,transparent\)\] {
     mask-image: radial-gradient(64rem 40rem at top,var(--color-base-100),transparent);
   }
@@ -3445,6 +3577,19 @@
       z-index: calc(10 * -1);
     }
   }
+  .before\:size-full {
+    &::before {
+      content: var(--tw-content);
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .before\:bg-\[url\(\/source\/assets\/images\/polka-dots\.svg\)\] {
+    &::before {
+      content: var(--tw-content);
+      background-image: url(/source/assets/images/polka-dots.svg);
+    }
+  }
   .before\:bg-cover {
     &::before {
       content: var(--tw-content);
@@ -3455,6 +3600,12 @@
     &::before {
       content: var(--tw-content);
       background-position: center;
+    }
+  }
+  .before\:opacity-50 {
+    &::before {
+      content: var(--tw-content);
+      opacity: 50%;
     }
   }
   .before\:blur-2xl {

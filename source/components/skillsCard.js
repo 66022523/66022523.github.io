@@ -7,7 +7,7 @@ class SkillCard extends HTMLElement {
 
   connectedCallback() {
     // Create a shadow root
-    const shadow = this.attachShadow({ mode: "open" });
+    const shadow = this.attachShadow({ mode: "closed" });
 
     // Apply external styles to the shadow dom
     const linkElement = document.createElement("link");

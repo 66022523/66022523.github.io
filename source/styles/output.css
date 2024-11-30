@@ -2542,6 +2542,29 @@
     height: var(--selector-size);
     min-width: var(--selector-size);
   }
+  .footer {
+    display: grid;
+    width: 100%;
+    grid-auto-flow: row;
+    place-items: start;
+    column-gap: calc(0.25rem * 4);
+    row-gap: calc(0.25rem * 10);
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    & > * {
+      display: grid;
+      place-items: start;
+      gap: calc(0.25rem * 2);
+    }
+    &.footer-center {
+      grid-auto-flow: column dense;
+      place-items: center;
+      text-align: center;
+      & > * {
+        place-items: center;
+      }
+    }
+  }
   .card-body {
     display: flex;
     flex: auto;
@@ -2922,6 +2945,9 @@
   .resize {
     resize: both;
   }
+  .grid-flow-col {
+    grid-auto-flow: column;
+  }
   .grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -3028,6 +3054,12 @@
   .bg-info {
     background-color: var(--color-info);
   }
+  .bg-neutral {
+    background-color: var(--color-neutral);
+  }
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
   .bg-success {
     background-color: var(--color-success);
   }
@@ -3062,6 +3094,9 @@
     --tw-gradient-to: transparent;
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position,) var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
+  .fill-current {
+    fill: currentColor;
+  }
   .fill-gray-100 {
     fill: var(--color-gray-100);
   }
@@ -3079,6 +3114,9 @@
   }
   .p-4 {
     padding: calc(var(--spacing) * 4);
+  }
+  .p-10 {
+    padding: calc(var(--spacing) * 10);
   }
   .menu-title {
     padding-inline: calc(0.25rem * 3);
@@ -3197,6 +3235,12 @@
   }
   .text-info {
     color: var(--color-info);
+  }
+  .text-neutral-content {
+    color: var(--color-neutral-content);
+  }
+  .text-primary-content {
+    color: var(--color-primary-content);
   }
   .text-success {
     color: var(--color-success);

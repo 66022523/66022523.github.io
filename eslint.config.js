@@ -10,7 +10,7 @@ export default [
   pluginJs.configs.recommended,
   {
     ...html.configs["flat/recommended"],
-    files: ["/source/**/*.html"],
+    files: ["**/*.html"],
     plugins: {
       "@html-eslint": html,
     },

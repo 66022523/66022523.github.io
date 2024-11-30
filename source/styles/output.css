@@ -1756,23 +1756,8 @@
   .inset-y-0 {
     inset-block: calc(var(--spacing) * 0);
   }
-  .-top-0 {
-    top: calc(var(--spacing) * -0);
-  }
-  .-top-1 {
-    top: calc(var(--spacing) * -1);
-  }
-  .-top-1\/2 {
-    top: calc(calc(1/2 * 100%) * -1);
-  }
   .top-0 {
     top: calc(var(--spacing) * 0);
-  }
-  .top-1 {
-    top: calc(var(--spacing) * 1);
-  }
-  .top-1\/2 {
-    top: calc(1/2 * 100%);
   }
   .right-0 {
     right: calc(var(--spacing) * 0);
@@ -1782,12 +1767,6 @@
   }
   .left-0 {
     left: calc(var(--spacing) * 0);
-  }
-  .left-1 {
-    left: calc(var(--spacing) * 1);
-  }
-  .left-1\/2 {
-    left: calc(1/2 * 100%);
   }
   .left-\[max\(50\%\,25rem\)\] {
     left: max(50%, 25rem);
@@ -2672,13 +2651,13 @@
     width: calc(var(--spacing) * 8);
     height: calc(var(--spacing) * 8);
   }
+  .size-10 {
+    width: calc(var(--spacing) * 10);
+    height: calc(var(--spacing) * 10);
+  }
   .size-12 {
     width: calc(var(--spacing) * 12);
     height: calc(var(--spacing) * 12);
-  }
-  .size-\[64rem\] {
-    width: 64rem;
-    height: 64rem;
   }
   .size-full {
     width: 100%;
@@ -2686,9 +2665,6 @@
   }
   .h-5 {
     height: calc(var(--spacing) * 5);
-  }
-  .h-6 {
-    height: calc(var(--spacing) * 6);
   }
   .h-52 {
     height: calc(var(--spacing) * 52);
@@ -2698,9 +2674,6 @@
   }
   .h-\[1px\] {
     height: 1px;
-  }
-  .h-full {
-    height: 100%;
   }
   .textarea {
     border: 1px solid transparent;
@@ -2846,9 +2819,6 @@
   .w-5 {
     width: calc(var(--spacing) * 5);
   }
-  .w-6 {
-    width: calc(var(--spacing) * 6);
-  }
   .w-96 {
     width: calc(var(--spacing) * 96);
   }
@@ -2876,26 +2846,6 @@
   }
   .-translate-x-1\/2 {
     --tw-translate-x: calc(calc(1/2 * 100%) * -1);
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-  .-translate-y-1 {
-    --tw-translate-y: calc(var(--spacing) * -1);
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-  .-translate-y-1\/2 {
-    --tw-translate-y: calc(calc(1/2 * 100%) * -1);
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-  .-translate-y-1\/4 {
-    --tw-translate-y: calc(calc(1/4 * 100%) * -1);
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-  .translate-y-1 {
-    --tw-translate-y: calc(var(--spacing) * 1);
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-  .translate-y-1\/4 {
-    --tw-translate-y: calc(1/4 * 100%);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .transform {
@@ -2985,9 +2935,6 @@
       margin-block-end: calc(calc(var(--spacing) * 12) * calc(1 - var(--tw-space-y-reverse)));
     }
   }
-  .self-center {
-    align-self: center;
-  }
   .overflow-clip {
     overflow: clip;
   }
@@ -3003,11 +2950,14 @@
   .rounded {
     border-radius: 0.25rem;
   }
-  .rounded-2xl {
-    border-radius: var(--radius-2xl);
-  }
   .rounded-\[50\%\] {
     border-radius: 50%;
+  }
+  .rounded-box {
+    border-radius: var(--radius-box);
+  }
+  .rounded-box {
+    border-radius: var(--radius-box);
   }
   .rounded-full {
     border-radius: calc(infinity * 1px);
@@ -3019,34 +2969,18 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
-  .border-t-12 {
-    border-top-style: var(--tw-border-style);
-    border-top-width: 12px;
+  .btn-dash {
+    &:not(.btn-active, :hover, :active:focus, :focus-visible) {
+      --btn-shadow: "";
+      border-style: dashed;
+      --btn-bg: transparent;
+      --btn-fg: var(--btn-color);
+      --btn-border: var(--btn-color);
+      --btn-gradient: unset;
+    }
   }
-  .border-b-12 {
-    border-bottom-style: var(--tw-border-style);
-    border-bottom-width: 12px;
-  }
-  .border-t-primary {
-    border-top-color: var(--color-primary);
-  }
-  .border-b-warning {
-    border-bottom-color: var(--color-warning);
-  }
-  .bg-\[linear-gradient\(rgba\(135\,_80\,_156\,_0\.9\)\,_rgba\(135\,_80\,_156\,_0\.9\)\)\,_url\(\/source\/assets\/images\/polka-dots\.svg\)\] {
-    background-color: linear-gradient(rgba(135, 80, 156, 0.9), rgba(135, 80, 156, 0.9)), url(/source/assets/images/polka-dots.svg);
-  }
-  .bg-\[u\] {
-    background-color: u;
-  }
-  .bg-\[url\(\/source\/assets\/images\/polka-dots\.svg\)\/50\%\] {
-    background-color: url(/source/assets/images/polka-dots.svg)/50%;
-  }
-  .bg-\[url\(\/source\/assets\/images\/polka-dots\.svg\)\/\] {
-    background-color: url(/source/assets/images/polka-dots.svg)/;
-  }
-  .bg-\[url\(\/source\/assets\/images\/polka-dots\.svg\)_50\%\] {
-    background-color: url(/source/assets/images/polka-dots.svg) 50%;
+  .bg-accent {
+    background-color: var(--color-accent);
   }
   .bg-base-100 {
     background-color: var(--color-base-100);
@@ -3059,12 +2993,6 @@
   }
   .bg-base-200\/50 {
     background-color: color-mix(in oklab, var(--color-base-200) 50%, transparent);
-  }
-  .bg-base-300 {
-    background-color: var(--color-base-300);
-  }
-  .bg-base-300\/90 {
-    background-color: color-mix(in oklab, var(--color-base-300) 90%, transparent);
   }
   .bg-info {
     background-color: var(--color-info);
@@ -3094,119 +3022,11 @@
     --tw-gradient-position: to top in oklch,;
     background-image: linear-gradient(var(--tw-gradient-stops));
   }
-  .bg-\[linear-gradient\(oklch\(from_var\(--color-base-300\)_l_c_h\/0\.5\)\,oklch\(from_var\(--color-base-300\)_l_c_h\/0\.5\)\)\,url\(\/source\/assets\/images\/polka-dots\.svg\)\] {
-    background-image: linear-gradient(oklch(from var(--color-base-300) l c h/0.5),oklch(from var(--color-base-300) l c h/0.5)),url(/source/assets/images/polka-dots.svg);
-  }
-  .bg-\[linear-gradient\(oklch\(from_var\(--color-base-300\)_l_c_h_\/0\.5\)\,oklch\(from_var\(--color-base-300\)_l_c_h_\/0\.5\)\)\,url\(\/source\/assets\/images\/polka-dots\.svg\)\] {
-    background-image: linear-gradient(oklch(from var(--color-base-300) l c h /0.5),oklch(from var(--color-base-300) l c h /0.5)),url(/source/assets/images/polka-dots.svg);
-  }
-  .bg-\[linear-gradient\(oklch\(from_var\(--color-base-300\)_l_c_h_\/_0\.\)\,oklch\(from_var\(--color-base-300\)_l_c_h_\/_0\.\)\)\,url\(\/source\/assets\/images\/polka-dots\.svg\)\] {
-    background-image: linear-gradient(oklch(from var(--color-base-300) l c h / 0.),oklch(from var(--color-base-300) l c h / 0.)),url(/source/assets/images/polka-dots.svg);
-  }
-  .bg-\[linear-gradient\(oklch\(from_var\(--color-base-300\)_l_c_h_\/_0\.5\)\,oklch\(from_var\(--color-base-300\)_l_c_h_\/_0\.5\)\)\,url\(\/source\/assets\/images\/polka-dots\.svg\)\] {
-    background-image: linear-gradient(oklch(from var(--color-base-300) l c h / 0.5),oklch(from var(--color-base-300) l c h / 0.5)),url(/source/assets/images/polka-dots.svg);
-  }
   .bg-\[linear-gradient\(oklch\(from_var\(--color-base-300\)_l_c_h_\/_0\.9\)\,oklch\(from_var\(--color-base-300\)_l_c_h_\/_0\.9\)\)\,url\(\/source\/assets\/images\/polka-dots\.svg\)\] {
     background-image: linear-gradient(oklch(from var(--color-base-300) l c h / 0.9),oklch(from var(--color-base-300) l c h / 0.9)),url(/source/assets/images/polka-dots.svg);
   }
-  .bg-\[linear-gradient\(oklch\(from_var\(--color-base-300\)_l_ch\/0\.5\)\,oklch\(from_var\(--color-base-300\)_l_ch\/0\.5\)\)\,url\(\/source\/assets\/images\/polka-dots\.svg\)\] {
-    background-image: linear-gradient(oklch(from var(--color-base-300) l ch/0.5),oklch(from var(--color-base-300) l ch/0.5)),url(/source/assets/images/polka-dots.svg);
-  }
-  .bg-\[linear-gradient\(oklch\(from_var\(--color-base-300\)_lch\/0\.5\)\,oklch\(from_var\(--color-base-300\)_lch\/0\.5\)\)\,url\(\/source\/assets\/images\/polka-dots\.svg\)\] {
-    background-image: linear-gradient(oklch(from var(--color-base-300) lch/0.5),oklch(from var(--color-base-300) lch/0.5)),url(/source/assets/images/polka-dots.svg);
-  }
-  .bg-\[linear-gradient\(oklch\(from_var\(--color-base-300\)_lch_\/_0\.9\)\,oklch\(from_var\(--color-base-300\)_lch_\/_0\.9\)\)\,url\(\/source\/assets\/images\/polka-dots\.svg\)\] {
-    background-image: linear-gradient(oklch(from var(--color-base-300) lch / 0.9),oklch(from var(--color-base-300) lch / 0.9)),url(/source/assets/images/polka-dots.svg);
-  }
-  .bg-\[linear-gradient\(oklch\(var\(--color-base-300\)\/0\.9\)\,\(var\(--color-base-300\)\/0\.9\)\)\,url\(\/source\/assets\/images\/polka-dots\.svg\)\] {
-    background-image: linear-gradient(oklch(var(--color-base-300)/0.9),(var(--color-base-300)/0.9)),url(/source/assets/images/polka-dots.svg);
-  }
-  .bg-\[linear-gradient\(oklchvar\(--color-base-300\)\/0\.9\,var\(--color-base-300\)\/0\.9\)\,url\(\/source\/assets\/images\/polka-dots\.svg\)\] {
-    background-image: linear-gradient(oklchvar(--color-base-300)/0.9,var(--color-base-300)/0.9),url(/source/assets/images/polka-dots.svg);
-  }
-  .bg-\[linear-gradient\(rgba\(135\,_80\,_156\,_0\.9\)\,_rgba\(135\,_80\,_156\,_0\.9\)\)\,url\(\/source\/assets\/images\/polka-dots\.svg\)\] {
-    background-image: linear-gradient(rgba(135, 80, 156, 0.9), rgba(135, 80, 156, 0.9)),url(/source/assets/images/polka-dots.svg);
-  }
-  .bg-\[linear-gradient\(rgba\(135\,_80\,_156\,_0\.9\)\,rgba\(135\,_80\,_156\,_0\.9\)\)\,url\(\/source\/assets\/images\/polka-dots\.svg\)\] {
-    background-image: linear-gradient(rgba(135, 80, 156, 0.9),rgba(135, 80, 156, 0.9)),url(/source/assets/images/polka-dots.svg);
-  }
-  .bg-\[linear-gradient\(rgba\(var\(\)\,_0\.9\)\,rgba\(var\(\)\,_0\.9\)\)\,url\(\/source\/assets\/images\/polka-dots\.svg\)\] {
-    background-image: linear-gradient(rgba(var(), 0.9),rgba(var(), 0.9)),url(/source/assets/images/polka-dots.svg);
-  }
-  .bg-\[linear-gradient\(rgba\(var\(--color-base-300\)\,0\.9\)\,rgba\(var\(--color-base-300\)\,0\.9\)\)\,url\(\/source\/assets\/images\/polka-dots\.svg\)\] {
-    background-image: linear-gradient(rgba(var(--color-base-300),0.9),rgba(var(--color-base-300),0.9)),url(/source/assets/images/polka-dots.svg);
-  }
-  .bg-\[linear-gradient\(rgba\(var\(--color-base-300\)\,_0\.9\)\,rgba\(var\(--color-base-300\)\,_0\.9\)\)\,url\(\/source\/assets\/images\/polka-dots\.svg\)\] {
-    background-image: linear-gradient(rgba(var(--color-base-300), 0.9),rgba(var(--color-base-300), 0.9)),url(/source/assets/images/polka-dots.svg);
-  }
-  .bg-\[linear-gradient\(rgba\(var\(--color-base-300\)\/0\.9\)\,rgba\(var\(--color-base-300\)\/0\.9\)\)\,url\(\/source\/assets\/images\/polka-dots\.svg\)\] {
-    background-image: linear-gradient(rgba(var(--color-base-300)/0.9),rgba(var(--color-base-300)/0.9)),url(/source/assets/images/polka-dots.svg);
-  }
-  .bg-\[linear-gradient\(rgba\(var\,_0\.9\)\,rgba\(var\,_0\.9\)\)\,url\(\/source\/assets\/images\/polka-dots\.svg\)\] {
-    background-image: linear-gradient(rgba(var, 0.9),rgba(var, 0.9)),url(/source/assets/images/polka-dots.svg);
-  }
-  .bg-\[linear-gradient\(var\(--color-base-300\)\,var\(--color-base-300\)\)\,url\(\/source\/assets\/images\/polka-dots\.svg\)\] {
-    background-image: linear-gradient(var(--color-base-300),var(--color-base-300)),url(/source/assets/images/polka-dots.svg);
-  }
-  .bg-\[linear-gradient\(var\(--color-base-300\)\.\,var\(--color-base-300\)\.\)\,url\(\/source\/assets\/images\/polka-dots\.svg\)\] {
-    background-image: linear-gradient(var(--color-base-300).,var(--color-base-300).),url(/source/assets/images/polka-dots.svg);
-  }
-  .bg-\[linear-gradient\(var\(--color-base-300\)\/\,var\(--color-base-300\)\/\)\,url\(\/source\/assets\/images\/polka-dots\.svg\)\] {
-    background-image: linear-gradient(var(--color-base-300)/,var(--color-base-300)/),url(/source/assets/images/polka-dots.svg);
-  }
-  .bg-\[linear-gradient\(var\(--color-base-300\)\/0\.9\,var\(--color-base-300\)\/0\.9\)\,url\(\/source\/assets\/images\/polka-dots\.svg\)\] {
-    background-image: linear-gradient(var(--color-base-300)/0.9,var(--color-base-300)/0.9),url(/source/assets/images/polka-dots.svg);
-  }
-  .bg-\[linear-gradient\(var\(--color-base-300\)\/90\%\,var\(--color-base-300\)\/90\%\)\,url\(\/source\/assets\/images\/polka-dots\.svg\)\] {
-    background-image: linear-gradient(var(--color-base-300)/90%,var(--color-base-300)/90%),url(/source/assets/images/polka-dots.svg);
-  }
-  .bg-\[linear-gradient\(var\(--color-base-300\)\/90\,var\(--color-base-300\)\/90\)\,url\(\/source\/assets\/images\/polka-dots\.svg\)\] {
-    background-image: linear-gradient(var(--color-base-300)/90,var(--color-base-300)/90),url(/source/assets/images/polka-dots.svg);
-  }
-  .bg-\[radial-gradient\(32rem_32rem_at_bottom\,var\(--color-base-100\)\,transparent\)\] {
-    background-image: radial-gradient(32rem 32rem at bottom,var(--color-base-100),transparent);
-  }
   .bg-\[radial-gradient\(32rem_32rem_at_top\,var\(--color-base-100\)\,transparent\)\] {
     background-image: radial-gradient(32rem 32rem at top,var(--color-base-100),transparent);
-  }
-  .bg-\[url\(\"https\:\/\/www\.fffuel\.co\/images\/tttexture\/full\/140\.jpg\"\)\] {
-    background-image: url("https://www.fffuel.co/images/tttexture/full/140.jpg");
-  }
-  .bg-\[url\(\'\'\)\] {
-    background-image: url('');
-  }
-  .bg-\[url\(\'https\:\/\/www\.fffuel\.co\/images\/tttexture\/full\/140\.jpg\'\)\] {
-    background-image: url('https://www.fffuel.co/images/tttexture/full/140.jpg');
-  }
-  .bg-\[url\(\)\] {
-    background-image: url();
-  }
-  .bg-\[url\(\.\/assets\/images\/\)\] {
-    background-image: url(./assets/images/);
-  }
-  .bg-\[url\(\.\/assets\/images\/polka\)\] {
-    background-image: url(./assets/images/polka);
-  }
-  .bg-\[url\(\.\/assets\/images\/polka-dots\)\] {
-    background-image: url(./assets/images/polka-dots);
-  }
-  .bg-\[url\(\.\/assets\/images\/polka-dots\.svg\)\] {
-    background-image: url(./assets/images/polka-dots.svg);
-  }
-  .bg-\[url\(\/assets\/images\/polka-dots\.svg\)\] {
-    background-image: url(/assets/images/polka-dots.svg);
-  }
-  .bg-\[url\(\/source\/assets\/images\/polka-dots\.svg\)\] {
-    background-image: url(/source/assets/images/polka-dots.svg);
-  }
-  .bg-\[url\(\\\"https\:\/\/www\.fffuel\.co\/images\/tttexture\/full\/140\.jpg\\\"\)\] {
-    background-image: url(\"https://www.fffuel.co/images/tttexture/full/140.jpg\");
-  }
-  .bg-\[url\(https\:\/\/www\.fffuel\.co\/images\/tttexture\/full\/140\.jpg\)\] {
-    background-image: url(https://www.fffuel.co/images/tttexture/full/140.jpg);
-  }
-  .bg-\[url\(https\:\/\/www\.fffuel\.co\/images\/tttexture\/thumb-149\.jpg\)\] {
-    background-image: url(https://www.fffuel.co/images/tttexture/thumb-149.jpg);
   }
   .from-base-300 {
     --tw-gradient-from: var(--color-base-300);
@@ -3219,12 +3039,6 @@
   .to-transparent {
     --tw-gradient-to: transparent;
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position,) var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
-  }
-  .bg-center {
-    background-position: center;
-  }
-  .fill-current {
-    fill: currentColor;
   }
   .fill-gray-100 {
     fill: var(--color-gray-100);
@@ -3241,8 +3055,20 @@
   .object-top {
     object-position: top;
   }
+  .p-2 {
+    padding: calc(var(--spacing) * 2);
+  }
+  .p-3 {
+    padding: calc(var(--spacing) * 3);
+  }
   .p-4 {
     padding: calc(var(--spacing) * 4);
+  }
+  .p-5 {
+    padding: calc(var(--spacing) * 5);
+  }
+  .p-8 {
+    padding: calc(var(--spacing) * 8);
   }
   .p-10 {
     padding: calc(var(--spacing) * 10);
@@ -3263,14 +3089,8 @@
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
   }
-  .pt-4 {
-    padding-top: calc(var(--spacing) * 4);
-  }
   .pt-10 {
     padding-top: calc(var(--spacing) * 10);
-  }
-  .pt-12 {
-    padding-top: calc(var(--spacing) * 12);
   }
   .pb-6 {
     padding-bottom: calc(var(--spacing) * 6);
@@ -3284,10 +3104,6 @@
   .align-middle {
     vertical-align: middle;
   }
-  .text-2xl {
-    font-size: var(--text-2xl);
-    line-height: var(--tw-leading, var(--text-2xl--line-height));
-  }
   .text-3xl {
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
@@ -3299,10 +3115,6 @@
   .text-5xl {
     font-size: var(--text-5xl);
     line-height: var(--tw-leading, var(--text-5xl--line-height));
-  }
-  .text-xl {
-    font-size: var(--text-xl);
-    line-height: var(--tw-leading, var(--text-xl--line-height));
   }
   .btn-lg {
     font-size: 1.125rem;
@@ -3367,9 +3179,6 @@
   }
   .text-neutral-content {
     color: var(--color-neutral-content);
-  }
-  .text-primary-content {
-    color: var(--color-primary-content);
   }
   .text-success {
     color: var(--color-success);
@@ -3504,9 +3313,6 @@
   .\[mask-image\:radial-gradient\(64rem_40rem_at_top\,var\(--color-base-100\)\,transparent\)\] {
     mask-image: radial-gradient(64rem 40rem at top,var(--color-base-100),transparent);
   }
-  .\[mask-image\:radial-gradient\(closest-side\,white\,transparent\)\] {
-    mask-image: radial-gradient(closest-side,white,transparent);
-  }
   .backface-hidden {
     backface-visibility: hidden;
   }
@@ -3577,19 +3383,6 @@
       z-index: calc(10 * -1);
     }
   }
-  .before\:size-full {
-    &::before {
-      content: var(--tw-content);
-      width: 100%;
-      height: 100%;
-    }
-  }
-  .before\:bg-\[url\(\/source\/assets\/images\/polka-dots\.svg\)\] {
-    &::before {
-      content: var(--tw-content);
-      background-image: url(/source/assets/images/polka-dots.svg);
-    }
-  }
   .before\:bg-cover {
     &::before {
       content: var(--tw-content);
@@ -3600,12 +3393,6 @@
     &::before {
       content: var(--tw-content);
       background-position: center;
-    }
-  }
-  .before\:opacity-50 {
-    &::before {
-      content: var(--tw-content);
-      opacity: 50%;
     }
   }
   .before\:blur-2xl {
@@ -3653,16 +3440,6 @@
       }
     }
   }
-  .sm\:left-full {
-    @media (width >= 40rem) {
-      left: 100%;
-    }
-  }
-  .sm\:-ml-80 {
-    @media (width >= 40rem) {
-      margin-left: calc(var(--spacing) * -80);
-    }
-  }
   .sm\:bg-\[length\:50\%\] {
     @media (width >= 40rem) {
       background-size: 50%;
@@ -3676,28 +3453,6 @@
   .md\:text-end {
     @media (width >= 48rem) {
       text-align: end;
-    }
-  }
-  .lg\:left-1\/2 {
-    @media (width >= 64rem) {
-      left: calc(1/2 * 100%);
-    }
-  }
-  .lg\:ml-0 {
-    @media (width >= 64rem) {
-      margin-left: calc(var(--spacing) * 0);
-    }
-  }
-  .lg\:-translate-x-1\/2 {
-    @media (width >= 64rem) {
-      --tw-translate-x: calc(calc(1/2 * 100%) * -1);
-      translate: var(--tw-translate-x) var(--tw-translate-y);
-    }
-  }
-  .lg\:translate-y-0 {
-    @media (width >= 64rem) {
-      --tw-translate-y: calc(var(--spacing) * 0);
-      translate: var(--tw-translate-x) var(--tw-translate-y);
     }
   }
   .dark\:fill-gray-900 {

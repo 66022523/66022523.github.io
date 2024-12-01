@@ -1,4 +1,5 @@
-const navLinks = document.querySelectorAll("nav a");
+const sideNavLinks = document.querySelectorAll("nav a");
+const bottomNavLinks = document.querySelectorAll("nav .dock a");
 const sections = document.querySelectorAll("section");
 
 window.addEventListener("scroll", function () {
@@ -10,13 +11,19 @@ window.addEventListener("scroll", function () {
     const sectionID = section.getAttribute("id");
 
     if (currentPos >= sectionTop && currentPos < sectionTop + sectionHeight) {
-      navLinks.forEach(function (navbarLink) {
+      sideNavLinks.forEach(function (navbarLink) {
         navbarLink.classList.remove("menu-active");
+      });
+      bottomNavLinks.forEach(function (navbarLink) {
+        navbarLink.classList.remove("dock-active");
       });
 
       document
         .querySelector(`nav a[href="#${sectionID}"]`)
         .classList.add("menu-active");
+      document
+        .querySelector(`nav .dock a[href="#${sectionID}"]`)
+        .classList.add("dock-active");
     }
   });
 });

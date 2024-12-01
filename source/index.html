@@ -419,39 +419,37 @@
         id="home"
         class="hero relative isolate min-h-screen bg-[radial-gradient(32rem_32rem_at_top,var(--color-base-100),transparent)]"
       >
-        <svg
-          class="absolute inset-0 left-[max(50%,25rem)] -z-10 size-full -translate-x-1/2 overflow-hidden stroke-gray-200 [mask-image:radial-gradient(64rem_40rem_at_top,var(--color-base-100),transparent)] dark:stroke-gray-800"
-          aria-hidden="true"
-        >
-          <defs>
-            <pattern
-              id="tables"
-              width="200"
-              height="200"
-              x="50%"
-              y="-1"
-              patternUnits="userSpaceOnUse"
-            >
-              <path d="M100 200V.5M.5 .5H200" fill="none" />
-            </pattern>
-          </defs>
+        <div class="absolute inset-0 -z-10 overflow-hidden">
           <svg
-            x="50%"
-            y="-1"
-            class="overflow-visible fill-gray-100 dark:fill-gray-900"
+            class="stroke-base-300 absolute top-0 left-[max(50%,25rem)] h-[64rem] w-[128rem] -translate-x-1/2 [mask-image:radial-gradient(64rem_40rem_at_top,var(--color-base-100),transparent)]"
+            aria-hidden="true"
           >
-            <path
-              d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z"
+            <defs>
+              <pattern
+                id="grid-top"
+                width="200"
+                height="200"
+                x="50%"
+                y="-1"
+                patternUnits="userSpaceOnUse"
+              >
+                <path d="M100 200V.5M.5 .5H200" fill="none" />
+              </pattern>
+            </defs>
+            <svg x="50%" y="-1" class="fill-base-300 overflow-visible">
+              <path
+                d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z"
+                stroke-width="0"
+              />
+            </svg>
+            <rect
+              width="100%"
+              height="100%"
               stroke-width="0"
+              fill="url(#grid-top)"
             />
           </svg>
-          <rect
-            width="100%"
-            height="100%"
-            stroke-width="0"
-            fill="url(#tables)"
-          />
-        </svg>
+        </div>
         <div class="hero-content text-center">
           <div class="max-w-xl">
             <img
@@ -1488,31 +1486,40 @@
       <!-- Contact -->
       <section
         id="contact"
-        class="from-base-300/90 relative isolate space-y-12 bg-linear-to-b/oklch to-transparent p-4 backdrop-blur sm:p-24"
+        class="from-base-300/90 relative isolate bg-linear-to-b/oklch to-transparent backdrop-blur"
       >
-        <svg
-          class="absolute inset-0 left-[max(50%,25rem)] -z-10 size-full -translate-x-1/2 overflow-hidden stroke-gray-200 [mask-image:radial-gradient(64rem_40rem_at_bottom,var(--color-base-100),transparent)] dark:stroke-gray-800"
-          aria-hidden="true"
-        >
-          <defs>
-            <pattern
-              id="grid-bottom"
-              width="200"
-              height="200"
-              x="50%"
-              y="-1"
-              patternUnits="userSpaceOnUse"
-            >
-              <path d="M100 200V.5M.5 .5H200" fill="none" />
-            </pattern>
-          </defs>
-          <rect
-            width="100%"
-            height="100%"
-            stroke-width="0"
-            fill="url(#grid-bottom)"
-          />
-        </svg>
+        <div class="absolute inset-0 -z-10 overflow-hidden">
+          <svg
+            class="stroke-base-300 absolute bottom-0 left-[max(50%,25rem)] h-[64rem] w-[128rem] -translate-x-1/2 [mask-image:radial-gradient(64rem_40rem_at_bottom,var(--color-base-100),transparent)]"
+            aria-hidden="true"
+          >
+            <defs>
+              <pattern
+                id="grid-bottom"
+                width="200"
+                height="200"
+                x="50%"
+                y="-1"
+                patternUnits="userSpaceOnUse"
+              >
+                <path d="M100 200V.5M.5 .5H200" fill="none" />
+              </pattern>
+            </defs>
+            <svg x="50%" y="-1" class="fill-base-300 overflow-visible">
+              <path
+                d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z"
+                stroke-width="0"
+              />
+            </svg>
+            <rect
+              width="100%"
+              height="100%"
+              stroke-width="0"
+              fill="url(#grid-bottom)"
+            />
+          </svg>
+        </div>
+        <div class="container mx-auto space-y-12 px-4 py-12 lg:p-16">
         <div>
           <a href="#contact" class="badge badge-primary badge-soft gap-2">
             <svg

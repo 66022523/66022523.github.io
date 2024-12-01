@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   import("./carouselAutoplay.js");
   import("./scrollSpy.js");
+  import("./scrollToTop.js");
   import("./themeController.js");
 
   // Set current age in about section

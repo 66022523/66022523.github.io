@@ -1,48 +1,37 @@
-export function getAverageRGB(imgElement) {
-  const blockSize = 5; // only visit every 5 pixels
-  const defaultRGB = { r: 0, g: 0, b: 0 };
+export function getAverageColor(imageElement) {
+  const blockSize = 5;
+  const color = { r: 0, g: 0, b: 0 };
   const canvas = document.createElement("canvas");
-  const context = canvas.getContext && canvas.getContext("2d");
+  const context =
+    canvas.getContext && canvas.getContext("2d", { willReadFrequently: true });
 
-  if (!context) return defaultRGB;
+  if (!context) return color;
 
-  const {
-    naturalWidth,
-    naturalHeight,
-    offsetWidth,
-    offsetHeight,
-    width,
-    height,
-  } = imgElement;
-  canvas.width = naturalWidth || offsetWidth || width;
-  canvas.height = naturalHeight || offsetHeight || height;
+  const width = imageElement.naturalWidth || imageElement.width;
+  const height = imageElement.naturalHeight || imageElement.height;
+  canvas.width = width;
+  canvas.height = height;
 
-  context.drawImage(imgElement, 0, 0);
+  context.drawImage(imageElement, 0, 0);
 
   try {
-    const { data } = context.getImageData(0, 0, canvas.width, canvas.height);
-    const length = data.length;
+    const imageData = context.getImageData(0, 0, width, height).data;
+    let count = 0;
 
-    let r = 0,
-      g = 0,
-      b = 0,
-      count = 0;
-
-    for (let i = 0; i < length; i += blockSize * 4) {
-      r += data[i];
-      g += data[i + 1];
-      b += data[i + 2];
+    for (let i = 0; i < imageData.length; i += blockSize * 4) {
+      color.r += imageData[i];
+      color.g += imageData[i + 1];
+      color.b += imageData[i + 2];
       count++;
     }
 
-    // Use Math.round for more accurate rounding
     return {
-      r: Math.round(r / count),
-      g: Math.round(g / count),
-      b: Math.round(b / count),
+      r: Math.round(color.r / count),
+      g: Math.round(color.g / count),
+      b: Math.round(color.b / count),
     };
   } catch (error) {
     console.error(error);
-    return defaultRGB;
+    return color;
   }
 }

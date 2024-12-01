@@ -5,10 +5,14 @@
   themes:
     light --default,
     dark --prefersdark;
+  logs: false;
 }
 
 @theme {
   --font-sans: "Prompt", "sans-serif";
+  --font-serif: "Prompt", "serif";
+
+  --font-display: "Prompt", "sans-serif";
 
   --animate-float: float 8s infinite alternate;
   --animate-float-reverse: float 8s infinite alternate-reverse;

@@ -1,6 +1,6 @@
 {
   "name": "chasu",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
   "scripts": {
     "lint": "npx eslint . --fix && npx prettier . --write",
@@ -14,7 +14,7 @@
     "daisyui": "^5.0.0-alpha.42",
     "eslint": "^9.16.0",
     "eslint-config-prettier": "^9.1.0",
-    "globals": "^15.12.0",
+    "globals": "^15.13.0",
     "prettier": "^3.4.1",
     "prettier-plugin-tailwindcss": "^0.6.9",
     "tailwindcss": "^4.0.0-beta.4"

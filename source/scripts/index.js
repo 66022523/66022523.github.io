@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+  import("./canvasColor.js")
   import("./carouselAutoplay.js");
   import("./scrollSpy.js");
   import("./scrollToTop.js");
